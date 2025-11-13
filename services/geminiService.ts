@@ -105,7 +105,13 @@ export const generateHookIdeas = async (
   topic: string,
   hookDetails?: string,
 ): Promise<HookIdeas> => {
-    let prompt = `Buatkan 10 ide hook pendek yang menarik perhatian untuk postingan media sosial dalam Bahasa Indonesia. Target audiensnya adalah "${audience}" dan topiknya adalah "${topic}". Hook harus membuat penasaran dan mendorong orang untuk ingin tahu lebih lanjut. Hindari kata-kata seperti 'TikTok', 'Shopee', 'harga', dan jangan membuat klaim yang berlebihan.`;
+    let prompt = `Buatkan 10 ide hook pendek yang menarik perhatian untuk postingan media sosial dalam Bahasa Indonesia. Topiknya adalah "${topic}".`;
+
+    if (audience.trim()) {
+      prompt += ` Target audiensnya adalah "${audience}".`;
+    }
+
+    prompt += ` Hook harus membuat penasaran dan mendorong orang untuk ingin tahu lebih lanjut. Hindari kata-kata seperti 'TikTok', 'Shopee', 'harga', dan jangan membuat klaim yang berlebihan.`;
 
     if (hookDetails) {
         prompt += `\n\nBerikut adalah detail tambahan dari pengguna untuk gaya hook yang diinginkan: "${hookDetails}".`;

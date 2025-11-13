@@ -19,8 +19,8 @@ const HookGenerator: React.FC = () => {
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!audience.trim() || !topic.trim()) {
-      setError('Harap isi kolom target audiens dan topik.');
+    if (!topic.trim()) {
+      setError('Harap isi kolom produk / topik.');
       return;
     }
 
@@ -56,8 +56,8 @@ const HookGenerator: React.FC = () => {
         </h2>
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="audience" className="block text-sm font-medium text-gray-300 mb-1">Target Audiens *</label>
-            <Input id="audience" value={audience} onChange={(e) => setAudience(e.target.value)} placeholder="contoh: Profesional muda, ibu rumah tangga" required />
+            <label htmlFor="audience" className="block text-sm font-medium text-gray-300 mb-1">Target Audiens (Opsional)</label>
+            <Input id="audience" value={audience} onChange={(e) => setAudience(e.target.value)} placeholder="contoh: Profesional muda, ibu rumah tangga" />
           </div>
           <div>
             <label htmlFor="topic" className="block text-sm font-medium text-gray-300 mb-1">Produk / Topik *</label>
