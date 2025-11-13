@@ -1,0 +1,5 @@
+{
+  "name": "AI SB Kohen",
+  "description": "Aplikasi berbasis AI untuk membuat caption, tagar, dan ide hook yang menarik untuk postingan media sosial Anda. Anda dapat secara opsional memberikan foto dan deskripsi produk untuk konten yang lebih disesuaikan.",
+  "requestFramePermissions": []
+}
